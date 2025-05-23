@@ -12,7 +12,7 @@ const Projects = () => {
   const projects: Project[] = [
     {
       title: "The Lighthouse: Shining a Light on the Gender Gap in Economic Engagement",
-      year: "2025",
+      year: "2024",
       description: "This video uses data visualization to explore the structural roots of gender disparities in global investment markets, revealing how economic, legal, and educational factors create barriers for female investors. By mapping global economic, legal, and educational data onto a lighthouse model, the video vividly illustrates gender gaps between different countries and regions, showing how economic foundations, legal protections, and education levels affect women's investment opportunities and economic independence.",
       image: placeholders.lighthouse,
       link: "https://datav.iwencai.com/#/data-news"
