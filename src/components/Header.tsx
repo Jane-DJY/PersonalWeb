@@ -26,7 +26,7 @@ const Header = ({ activeSection, setActiveSection }: HeaderProps) => {
   return (
     <header className="header">
       <a href="#" className="logo" onClick={() => handleNavClick('about')}>
-        Jieying Ding 🌺 丁杰英
+        J.Ding
       </a>
       
       <button className="mobile-menu-btn" onClick={toggleMenu}>
