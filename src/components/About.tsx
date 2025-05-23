@@ -4,9 +4,7 @@ const About = () => {
       <h2 className="section-title fade-in">About Me</h2>
       
       <div className="about-content fade-in delay-1">
-        <p>
-          Hi there, and welcome to my little corner of the universe~~ ✨
-        </p>
+        <p>Hi there, and welcome to my little corner of the universe~~ ✨</p>
         
         <p>
           Right now, I'm a visualization product manager on a mission to cook up some delightfully innovative products.
