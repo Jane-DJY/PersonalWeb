@@ -614,3 +614,8 @@ footer .container {
 .social-link .emoji {
     font-size: 1.6rem;
 }
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: 500;
+}
