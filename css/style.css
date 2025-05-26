@@ -15,7 +15,7 @@
     --transition: all 0.3s ease;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -24,7 +24,7 @@
 }
 
 body {
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -204,7 +204,7 @@ nav {
     font-size: 4.5rem;
     margin-bottom: 1rem;
     color: var(--text-color);
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 700;
     letter-spacing: -1px;
     line-height: 1.1;
@@ -220,7 +220,7 @@ nav {
     opacity: 0.9;
     color: var(--light-text);
     margin-bottom: 2rem;
-    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 300;
 }
 
@@ -605,6 +605,7 @@ footer .container {
     color: var(--text-color);
     text-decoration: none;
     transition: var(--transition);
+    position: relative;
 }
 
 .social-link:hover {
@@ -613,6 +614,56 @@ footer .container {
 
 .social-link .emoji {
     font-size: 1.6rem;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: auto;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 8px;
+    position: absolute;
+    z-index: 1;
+    top: -15px;
+    right: -60px;
+    left: auto;
+    margin-left: 0;
+    font-size: 0.75rem;
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap;
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    margin-left: 0;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--light-bg) transparent transparent transparent;
+    transform: rotate(45deg);
+    transform-origin: 0 0;
+}
+
+.social-link:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-8deg); }
+    50% { transform: rotate(8deg); }
+    75% { transform: rotate(-8deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.social-link:hover .emoji {
+    animation: shake 0.4s ease-in-out;
 }
 
 .highlight {
