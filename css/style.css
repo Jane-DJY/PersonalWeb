@@ -15,7 +15,7 @@
     --transition: all 0.3s ease;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -24,7 +24,7 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Noto Sans SC', sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -204,7 +204,7 @@ nav {
     font-size: 4.5rem;
     margin-bottom: 1rem;
     color: var(--text-color);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Noto Sans SC', 'Source Han Sans', sans-serif;
     font-weight: 700;
     letter-spacing: -1px;
     line-height: 1.1;
@@ -220,7 +220,7 @@ nav {
     opacity: 0.9;
     color: var(--light-text);
     margin-bottom: 2rem;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Noto Sans SC', 'Source Han Sans', sans-serif;
     font-weight: 300;
 }
 
@@ -596,6 +596,10 @@ footer .container {
 
 .social-links {
     margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 .social-link {
@@ -608,12 +612,29 @@ footer .container {
     position: relative;
 }
 
+.social-link:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+    height: 20px;
+    background-color: var(--border-color);
+    opacity: 0.5;
+}
+
 .social-link:hover {
     transform: translateY(-2px) scale(1.1);
 }
 
 .social-link .emoji {
     font-size: 1.6rem;
+    display: inline-block;
+    width: 1.6rem;
+    height: 1.6rem;
+    text-align: center;
+    line-height: 1.6rem;
 }
 
 .tooltip-text {
@@ -626,8 +647,8 @@ footer .container {
     padding: 3px 8px;
     position: absolute;
     z-index: 1;
-    top: -15px;
-    right: -60px;
+    top: -20px;
+    right: -40px;
     left: auto;
     margin-left: 0;
     font-size: 0.75rem;

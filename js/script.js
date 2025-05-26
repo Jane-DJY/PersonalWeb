@@ -67,6 +67,33 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // 初始检查
     animateOnScroll();
+
+    // 添加邮箱复制功能
+    const emailLink = document.querySelector('.email-link');
+    const email = 'djy20182019@gmail.com';
+    
+    emailLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // 复制邮箱到剪贴板
+        navigator.clipboard.writeText(email).then(() => {
+            // 创建提示元素
+            const tooltip = document.createElement('div');
+            tooltip.className = 'tooltip-text';
+            tooltip.textContent = 'Copied! 📧 djy20182019@gmail.com';
+            
+            // 添加到邮箱链接元素中
+            emailLink.appendChild(tooltip);
+            
+            // 2秒后移除提示
+            setTimeout(() => {
+                tooltip.style.opacity = '0';
+                setTimeout(() => {
+                    emailLink.removeChild(tooltip);
+                }, 300);
+            }, 2000);
+        });
+    });
 });
 
 // 添加CSS动画类
