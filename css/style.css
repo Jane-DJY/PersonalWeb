@@ -277,8 +277,9 @@ nav {
 .hero-title {
     font-size: 1rem !important;
     margin-bottom: 1rem;
-    opacity: 0.9;
-    color: var(--light-text);
+    opacity: 1;
+    color: var(--text-color);
+    font-weight: 500;
 }
 
 .about-text {
